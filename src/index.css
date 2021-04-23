@@ -64,3 +64,16 @@ code {
    display:none;
  }
 }
+
+.ql-omega{
+  margin-right: 50px;
+}
+
+.ql-omega:after {
+  content: "Bunty9";
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+
+}
