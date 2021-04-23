@@ -109,7 +109,7 @@ function TextEditor() {
         q.enable(false)
         q.setText("Loading . . . ")
         setQuill(q)
-    }, [])
+    }, [history])
     
 
 
