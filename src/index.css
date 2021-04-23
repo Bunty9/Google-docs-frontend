@@ -65,6 +65,8 @@ code {
  }
 }
 
+
+
 .ql-omega{
   margin-right: 50px;
 }
@@ -75,5 +77,20 @@ code {
   font-family: Montserrat;
   font-size: 15px;
   font-weight: 600;
+  display: inline-block;
+}
 
+.ql-delta{
+  margin-top: 0px;
+  margin-left: 10px;
+  width: 200px;
+}
+
+.ql-delta:after {
+  content: "New Document";  
+  display: inline-block;
+  justify-content:center;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 200;
 }

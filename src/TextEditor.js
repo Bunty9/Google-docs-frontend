@@ -3,7 +3,7 @@ import {useEffect , useState} from 'react'
 import Quill from "quill"
 import "./quill.snow.css";
 import io from "socket.io-client"
-import { useParams } from "react-router-dom"
+import { useParams , useHistory  } from "react-router-dom"
 
 const SAVE_INTERVAL_MS = 5000;
 const TOOLBAR_OPTIONS = [
@@ -16,6 +16,7 @@ const TOOLBAR_OPTIONS = [
     [{ align: [] }],
     ["image", "blockquote", "code-block"],
     ["clean"],
+    ['delta'],
 ]
 
 const ENDPOINT = "https://google-docs-backend.herokuapp.com"
@@ -24,6 +25,7 @@ function TextEditor() {
     const { id: documentId} = useParams()
     const [socket,setSocket] = useState()
     const [quill,setQuill] = useState() 
+    const history = useHistory();
 
     useEffect(() =>{
         const s = io(ENDPOINT, {
@@ -94,10 +96,15 @@ function TextEditor() {
         wrapper.append(editor)
         const q = new Quill(editor, {theme: "snow" , modules: {toolbar: TOOLBAR_OPTIONS}} )
 
-        var customButton = document.querySelector('.ql-omega');
-        customButton.addEventListener('click', function() {
+        var customButton1 = document.querySelector('.ql-omega');
+        customButton1.addEventListener('click', function() {
             console.log("clicked")
             window.location = "https://github.com/Bunty9";
+        });
+        var customButton2 = document.querySelector('.ql-delta');
+        customButton2.addEventListener('click', function(res) {
+            console.log("clicked")
+            history.push(`/`);
         });
         q.enable(false)
         q.setText("Loading . . . ")
