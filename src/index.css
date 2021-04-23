@@ -1,4 +1,9 @@
+*, *::before , *::after{
+  box-sizing: border-box;
+}
+
 body {
+  background-color: #f3f3f3;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +15,52 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container .ql-editor {
+  width: 8.5in;
+  height: 11in;
+  background-color: #FFFFFF;
+  padding: 1in ;
+  margin: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.container .ql-container.ql-snow {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.container .ql-toolbar.ql-snow{
+  display:flex;
+  justify-content: center;
+  background-color: #f3f3f3;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+
+}
+
+@page {
+  margin: 1in;
+}
+@media print {
+  body {
+    background: none;
+
+  }
+
+ .container .ql-editor {
+   width: 6.5 in;
+   height: 9in;
+   padding: 0;
+   margin: 0;
+   align-self: flex-start;
+   box-shadow: none;
+ }
+ .container .ql-toolbar.ql-snow{
+   display:none;
+ }
 }
