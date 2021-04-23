@@ -18,7 +18,7 @@ const TOOLBAR_OPTIONS = [
     ["clean"],
 ]
 
-
+const ENDPOINT = "https://google-docs-backend.herokuapp.com"
 
 function TextEditor() {
     const { id: documentId} = useParams()
@@ -26,7 +26,10 @@ function TextEditor() {
     const [quill,setQuill] = useState() 
 
     useEffect(() =>{
-        const s = io("https://google-docs-backend.vercel.app")
+        const s = io(ENDPOINT, {
+            path: "/",
+            withCredentials: true,
+          });
         setSocket(s)
         return ()=>{
             s.disconnect();
