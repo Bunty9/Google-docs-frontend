@@ -1,5 +1,5 @@
 ## Github
-You can check out [My GitHub repository](https://github.com/Bunty9) \ 
+You can check out [My GitHub repository](https://github.com/Bunty9) 
 - your feedback and contributions are welcome!
 
 ## Demo Deployment
@@ -10,7 +10,7 @@ This is currently deployed here: [Google-Docs-Clone](https://google-docs-gamma.v
 
 ### Install
 `npm install` \
-`yarn install` \
+`yarn install` 
 ### Start
 `npm start` \
 `yarn start` \
