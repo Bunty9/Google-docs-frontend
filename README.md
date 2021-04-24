@@ -2,16 +2,16 @@
 You can check out [My GitHub repository](https://github.com/Bunty9) \ 
 - your feedback and contributions are welcome!
 
-### Demo Deployment
+## Demo Deployment
 This is currently deployed here: [Google-Docs-Clone](https://google-docs-gamma.vercel.app)
 
 
-### Run Locally
+## Run Locally
 
-# Install
+### Install
 `npm install` \
 `yarn install` \
-# Start
+### Start
 `npm start` \
 `yarn start` \
 Runs the app in the development mode.\
